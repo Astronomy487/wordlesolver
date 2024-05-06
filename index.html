@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>wordle solver</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  
+  html {
+  	font-size: 2.5rem;
+  }
+  
+  body {
+  	background-color: #222;
+    color: white;
+    overflow: hidden;
+    font-family: Inter, sans-serif;
+    text-align: center;
+    user-select: none;
+  }
+  
+  main {
+    margin-top: 2rem;
+  }
+
+  input {
+    border: none;
+    background-color: #eee;
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    cursor: default;
+    user-select: none;
+  }
+  
+  ::selection {
+    background: inherit;
+    color: inherit;
+  }
+  
+  input:focus {
+  	outline: none;
+  }
+  
+  input::placeholder {
+  	color: #888;
+  }
+  
+  section input {
+    cursor: pointer;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-size: 0.5rem;
+    padding: 0.25rem;
+    font-family: inherit;
+    width: 10rem;
+  }
+  
+  button:hover, button:focus {
+  	background-color: #555;
+    outline: none;
+  }
+  
+  article {
+    background-color: inherit;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100vh;
+  }
+  
+  footer {
+    font-size: 0.5rem;
+    width: 15rem;
+    margin: 2rem auto;
+  }
+  
+  p {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: solid 0.125rem #444;
+    padding-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  </style>
+</head>
+<body>
+  <article>
+    <button onclick="load_normal_wordle(); start();">Use normal Wordle list</button>
+    <button onclick="load_infinite_wordle(); start();">Use Infinite Wordle list</button>
+  </article>
+  <main></main><section></section>
+  <button onclick="solve()">Submit and find best word</button>
+  <footer></footer>
+  <script src="script.js"></script>
+</body>
+</html>
